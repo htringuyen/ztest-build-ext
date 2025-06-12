@@ -14,8 +14,8 @@ include(${ZEPHYR_CMAKE_MODULES_DIR}/hwm_v2.cmake)
 include(${ZEPHYR_CMAKE_MODULES_DIR}/configuration_files.cmake)
 
 include(${ZEPHYR_CMAKE_MODULES_DIR}/kconfig.cmake)
-include(${ZEPHYR_CMAKE_MODULES_DIR}/arch_v2.cmake)
-include(${ZEPHYR_CMAKE_MODULES_DIR}/soc_v2.cmake)
+include(${ZEPHYR_CMAKE_MODULES_DIR}/arch.cmake)
+include(${ZEPHYR_CMAKE_MODULES_DIR}/soc.cmake)
 
 find_package(TargetTools)
 
@@ -58,7 +58,7 @@ target_link_libraries(app PRIVATE test_interface)
 set(KOBJ_TYPES_H_TARGET kobj_types_h_target)
 include(${ZEPHYR_BASE}/cmake/kobj.cmake)
 add_dependencies(test_interface ${KOBJ_TYPES_H_TARGET})
-gen_kobj(KOBJ_GEN_DIR)
+gen_kobject_list_headers(GEN_DIR_OUT_VAR KOBJ_GEN_DIR)
 
 # Generates empty header files to build
 set(INCL_GENERATED_DIR ${APPLICATION_BINARY_DIR}/zephyr/include/generated/zephyr)
