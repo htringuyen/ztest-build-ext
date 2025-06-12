@@ -1,0 +1,29 @@
+menu "Unit_Test_Packages"
+
+config UT_PACKAGES
+    bool "Global switch for unit test packages from ZTest build extension"
+    default y
+
+if UT_PACKAGES
+
+config UT_RING_BUFFER
+	bool "Include the module zephyr/lib/utils/ring_buffer"
+    select RING_BUFFER
+	default n
+
+config UT_LOGGING
+	bool "Include the module zephyr/subsys/logging"
+    select LOG
+	default n
+
+config UT_MALLOC
+	bool "Include the implementation of k_malloc and k_free with std malloc and free"
+	default n
+
+config UT_CRC
+	bool "Include the module zephyr/lib/crc"
+	default n
+
+endif # UT_PACKAGES
+
+endmenu

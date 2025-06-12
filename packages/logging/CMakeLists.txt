@@ -1,0 +1,1 @@
+add_subdirectory(${ZEPHYR_BASE}/subsys/logging ${PACKAGES_BUILD_DIR}/packages/logging)

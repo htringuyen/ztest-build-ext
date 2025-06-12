@@ -1,0 +1,20 @@
+
+# config UT_LIB
+# 	bool "Include the module zephyr/lib"
+# 	default n
+
+# config UT_LIB_UTILS
+# 	bool "Include the module zephyr/lib/utils"
+# 	default n
+
+# config UT_LIB_RING_BUFFER
+# 	bool "Include the module zephyr/lib/utils/ring_buffer"
+# 	default RING_BUFFER
+
+# config UT_SUBSYS_LOG
+# 	bool "Include zephyr/subs"
+# 	default LOG
+
+# config UT_KERNEL_MEM_POOL
+# 	bool "Include the module kernel/mem_pool"
+# 	default n

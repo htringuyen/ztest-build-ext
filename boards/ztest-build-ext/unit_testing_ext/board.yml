@@ -1,0 +1,5 @@
+board:
+  name: unit_testing_ext
+  vendor: ztest-build-ext
+  socs:
+  - name: unit_testing

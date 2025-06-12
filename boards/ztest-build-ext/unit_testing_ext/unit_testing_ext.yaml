@@ -1,0 +1,9 @@
+identifier: unit_testing_ext
+name: Unit Testing Extension
+type: native
+arch: posix
+toolchain:
+  - host
+  - llvm
+testing:
+  default: true

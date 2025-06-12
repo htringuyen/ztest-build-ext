@@ -1,0 +1,6 @@
+tests:
+  ztest_build_ext.logging: 
+    tags:
+      - dummy_malloc
+    platform_allow:
+      - unit_testing_ext

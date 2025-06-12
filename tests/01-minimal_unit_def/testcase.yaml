@@ -1,0 +1,5 @@
+tests:
+  ztest_build_ext.minimal_build:
+    type: unit
+    tags:
+      - minimal_build

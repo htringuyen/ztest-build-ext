@@ -1,0 +1,1 @@
+zephyr_sources(${ZEPHYR_BASE}/lib/utils/ring_buffer.c)

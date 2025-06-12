@@ -1,0 +1,10 @@
+# SPDX-License-Identifier: Apache-2.0
+#
+# Copyright (c) 2022 Nordic Semiconductor
+
+config BOARD_UNIT_TESTING_EXT
+	bool "Unit testing extension board"
+	select HAS_COVERAGE_SUPPORT
+	#select CONFIG_NATIVE_LIBRARY
+	help
+	  Board for unit testing

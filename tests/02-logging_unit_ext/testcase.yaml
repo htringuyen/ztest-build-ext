@@ -1,0 +1,6 @@
+tests:
+  ztest_build_ext.logging: 
+    tags:
+      - logging_sample
+    platform_allow:
+      - unit_testing_ext

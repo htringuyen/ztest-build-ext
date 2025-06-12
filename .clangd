@@ -1,0 +1,6 @@
+CompileFlags:
+  Add: [
+    -I/home/htring/.zephyrww/v4.1.0/zephyr/include,
+    -I/home/htring/.zephyrww/v4.1.0/zephyr/subsys/testsuite/ztest/include,
+    -I/home/htring/embc/virtual-sensing/include
+  ]

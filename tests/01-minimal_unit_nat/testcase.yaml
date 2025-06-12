@@ -1,0 +1,6 @@
+tests:
+  ztest_build_ext.minimal_build: 
+    tags:
+      - minimal_build
+    platform_allow:
+      - native_sim/native
