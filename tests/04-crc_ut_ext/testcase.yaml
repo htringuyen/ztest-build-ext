@@ -1,0 +1,13 @@
+tests:
+  utilities.crc:
+    tags:
+      - crc
+    #type: unit
+    platform_allow: unit_testing_ext
+  utilities.crc.table256:
+    tags:
+      - crc
+    #type: unit
+    platform_allow: unit_testing_ext
+    extra_configs:
+      - CONFIG_CRC32_K_4_2_TABLE_256=y

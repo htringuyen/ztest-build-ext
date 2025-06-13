@@ -3,4 +3,4 @@ tests:
     tags:
       - minimal_build
     platform_allow:
-      - unit_testing_ext
+      - native_sim
