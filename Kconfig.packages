@@ -22,6 +22,7 @@ config UT_MALLOC
 
 config UT_CRC
 	bool "Include the module zephyr/lib/crc"
+	select CRC
 	default n
 
 endif # UT_PACKAGES
