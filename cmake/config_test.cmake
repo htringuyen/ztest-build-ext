@@ -4,6 +4,8 @@ include_guard(GLOBAL)
 
 cmake_minimum_required(VERSION 3.20.0)
 
+set(M64_MODE TRUE)
+
 set(ZEPHYR_CMAKE_MODULES_DIR "${ZEPHYR_BASE}/cmake/modules")
 
 include(${ZEPHYR_CMAKE_MODULES_DIR}/extensions.cmake)

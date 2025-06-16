@@ -13,7 +13,7 @@ add_library(zephyr STATIC)
 target_link_libraries(zephyr PRIVATE test_interface)
 
 # load extra modules
-foreach(module IN LISTS INCLUDE_EXTRA_ZEPHYR_MODULES)
+foreach(module IN LISTS ZTEST_INCLUDE_EXTRA_ZEPHYR_MODULES)
     string(TOUPPER "${module}" MODULE_UPPER)
     string(REGEX REPLACE "[^A-Z]" "_" MODULE_UPPER "${MODULE_UPPER}")
 
