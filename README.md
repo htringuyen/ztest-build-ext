@@ -9,4 +9,4 @@ The naming conventions of the test application is as follows: [app_id]-[app_name
 - `testing_type`: `ut` for unit test or `it` for integration test
 - `testing_way`: `ext` if using `ztest-build-ext`, `def` if using default twiter build and run way.
 
-For understanding this project, you can start with the zephyr's custom cmake module [ztest_build_ext](https://github.com/htringuyen/zephyr/blob/main/cmake/modules/ztest_build_ext.cmake)
+For understanding this project, you can start with the zephyr's custom cmake module [ztest_build_ext](https://github.com/htringuyen/zephyr/blob/main/cmake/modules/ztest_build_ext.cmake), in addition to the [twisterw](https://github.com/htringuyen/zephyr-without-west/blob/main/bin/linux/twisterw) script.
