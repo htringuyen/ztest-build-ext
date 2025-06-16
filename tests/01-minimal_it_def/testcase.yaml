@@ -1,6 +1,5 @@
 tests:
   sample.testing.ztest:
-    build_only: true
     platform_allow:
       - native_sim
     integration_platforms:
