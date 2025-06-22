@@ -17,3 +17,7 @@ void *k_malloc(size_t size) {
 void k_free(void *ptr) {
     free(ptr);
 }
+
+void *k_realloc(void *ptr, size_t size) {
+    return realloc(ptr, size);
+}

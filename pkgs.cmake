@@ -22,8 +22,22 @@ foreach(module IN LISTS ZTEST_INCLUDE_EXTRA_ZEPHYR_MODULES)
         message(FATAL_ERROR "Module not found: ${module}")
     endif()
     message(STATUS "Load module at: ${MODULE_DIR}")
-    add_subdirectory(${MODULE_DIR} ${CMAKE_BINARY_DIR}/modules/${module})
+
+    if (EXISTS "${MODULE_DIR}/main")
+        add_subdirectory(${MODULE_DIR}/main ${CMAKE_BINARY_DIR}/modules/${module})
+    else()
+        add_subdirectory(${MODULE_DIR} ${CMAKE_BINARY_DIR}/modules/${module})
+    endif()
+    
 endforeach()
+
+# load private headers of current module if any
+if(CURRENT_MODULE_PRIVATE_INCLUDE_DIR)
+    zephyr_include_directories(${CURRENT_MODULE_PRIVATE_INCLUDE_DIR})
+    message(STATUS "Include private header in: ${CURRENT_MODULE_PRIVATE_INCLUDE_DIR}")
+else()
+    message(FATAL_ERROR "Failed to include private headers in: ${CURRENT_MODULE_PRIVATE_INCLUDE_DIR}")
+endif()
 
 # load additional packages for unit test
 set(PACKAGES_BUILD_DIR "${CMAKE_BINARY_DIR}/packages")
